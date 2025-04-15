@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>AV Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h1>Bienvenue sur AV Manager</h1>
+
+    <h2>📤 Importer un fichier audio ou vidéo</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Téléverser</button>
+    </form>
+
+    <h2>🛠️ Actions</h2>
+    <form action="/convert" method="post">
+        <button type="submit">Convertir un fichier</button>
+    </form>
+
+    <form action="/cut" method="post">
+        <button type="submit">Découper un fichier</button>
+    </form>
+</body>
+</html>
