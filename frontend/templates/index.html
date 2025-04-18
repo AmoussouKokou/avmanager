@@ -60,7 +60,7 @@
                                  
                                     <h2><b>A</b>udios & <b>V</b>ideos Manager</h2>
                                     <p>Transformez vos fichiers audios et vidéos en de formats utiles</p>
-                                    <a class="btn btn-primary btn-lg" href="#">Start Now</a>
+                                    <a class="btn btn-primary btn-lg" href="#services">Start Now</a>
                                 
                             </div>
                         </div>
@@ -78,8 +78,10 @@
 
             <div class="row">
                 <div class="services">
+                    
+                    <!---------------------- TELECHARGER YOUTUBE -------------------->
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
-                        <div class="media service-box clickable-box" onclick="toggleYoutubeOptions()" style="cursor: pointer;">
+                        <div class="media service-box clickable-box" data-target="youtube-options" onclick="toggleOptions(this)" style="cursor: pointer;">
                             <div class="pull-left">
                                 <i class="fa fa-youtube-play"></i>
                             </div>
@@ -89,10 +91,20 @@
                                 <p>Télécharger le mp4 à partir d'un lien youtube</p>
                             </div>
                         </div>
+
+                        <!-- Bloc d'options pour YouTube (caché par défaut) -->
+                        <div id="youtube-options" class="option-block" style="display: none; margin-top: 15px; padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd;">
+                            <form onsubmit="handleYoutubeDownload(event)">
+                                <input type="text" id="youtube-link" name="youtube-link" placeholder="https://youtube.com/..." required style="width: 100%; padding: 6px; margin: 10px 0;"><br>
+                                <button type="submit" class="btn btn-primary">Télécharger</button>
+                            </form>
+                        </div>    
                     </div><!--/.col-md-4-->
 
+                    <!---------------------- MP4 TO MP3 -------------------->
+
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
-                        <div class="media service-box clickable-box" onclick="toggleYoutubeOptions()" style="cursor: pointer;">
+                        <div class="media service-box clickable-box" data-target="mp4-to-mp3-options" onclick="toggleOptions(this)" style="cursor: pointer;">
                             <div class="pull-left">
                                 <i class="fa fa-compass"></i>
                             </div>
@@ -101,10 +113,23 @@
                                 <p>Convertir du mp4 en mp3</p>
                             </div>
                         </div>
+
+                        <!-- Bloc caché d’options -->
+                        <div id="mp4-to-mp3-options" class="option-block" style="display: none; margin-top: 15px; padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd;">
+                            <form onsubmit="handleMp4ToMp3(event)">
+                                <label for="mp4-file">Fichier MP4 :</label><br>
+                                <input type="file" id="mp4-file" name="mp4-file" accept="video/mp4" required><br><br>
+    
+                                <button type="submit" class="btn btn-primary">Convertir en MP3</button>
+                            </form>
+                        </div>
+    
                     </div><!--/.col-md-4-->
+                    
+                    <!---------------------- MP3 TO MP4 -------------------->
 
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
-                        <div class="media service-box clickable-box" onclick="toggleYoutubeOptions()" style="cursor: pointer;">
+                        <div class="media service-box clickable-box" data-target="mp3-to-mp4-options" onclick="toggleOptions(this)" style="cursor: pointer;">
                             <div class="pull-left">
                                 <i class="fa fa-database"></i>
                             </div>
@@ -113,34 +138,88 @@
                                 <p>Ajouter une image sur votre audio pour en faire une vidéo</p>
                             </div>
                         </div>
+
+                        <!-- Bloc caché : MP3 to MP4 -->
+                        <div id="mp3-to-mp4-options" class="option-block" style="display: none; margin-top: 20px; padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd;">
+                            <h4>Convertir mp3 en mp4 (avec image)</h4>
+                            <form onsubmit="handleMp3ToMp4(event)">
+                                <div class="form-group">
+                                    <label for="mp3file">Choisir le fichier audio (.mp3) :</label>
+                                    <input type="file" id="mp3File" name="mp3File" accept=".mp3" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="imagefile">Choisir une image (.jpg, .png) :</label>
+                                    <input type="file" id="imageFile" name="imageFile" accept="image/*" class="form-control" required>
+                                </div>
+
+                                <button type="submit" class="btn btn-success" onclick="convertMp3ToMp4()">Convertir en mp4</button>
+                            </form>
+                        </div>
                     </div><!--/.col-md-4-->
-                
+                    
+                    <!---------------------- JOINDRE MP3s -------------------->
+
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-                        <div class="media service-box clickable-box" onclick="toggleYoutubeOptions()" style="cursor: pointer;">
+                        <div class="media service-box clickable-box" data-target="joindre-mp3-options" onclick="toggleOptions(this)" style="cursor: pointer;">
                             <div class="pull-left">
                                 <i class="fa fa-bar-chart"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">cPanel Access</h4>
-                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                                <h4 class="media-heading">Joindre Mp3</h4>
+                                <p>Entrer 2 ou plusieurs fichiers mp3 pour les joindre</p>
                             </div>
                         </div>
+
+                        <!-- Formulaire masqué au départ -->
+                        <div id="joindre-mp3-options" class="option-block" style="display: none; margin-top: 15px; padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd;">
+                            <form onsubmit="handleJoinMp3(event)">
+                                <label for="joinMp3Files">Sélectionnez des fichiers MP3 :</label>
+                                <input type="file" id="joinMp3Files" name="joinMp3Files[]" accept=".mp3" multiple required class="form-control" style="margin-bottom: 10px;">
+                                
+                                <button type="submit" class="btn btn-primary">Joindre</button>
+                            </form>
+                        </div>
                     </div><!--/.col-md-4-->
+                    
+                    <!---------------------- COUPER MP3s -------------------->
 
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-                        <div class="media service-box clickable-box" onclick="toggleYoutubeOptions()" style="cursor: pointer;">
+                        <div class="media service-box clickable-box" onclick="toggleOptions(this)" data-target="couper-mp3" style="cursor: pointer;">
                             <div class="pull-left">
                                 <i class="fa fa-paper-plane-o"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Windows</h4>
-                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                                <h4 class="media-heading">Couper Mp3</h4>
+                                <p>choisir un mp3 avec les durées de départ et de fin pour faire une extraction</p>
                             </div>
                         </div>
+
+                        <div id="couper-mp3" class="option-block" style="display: none; margin-top: 20px;">
+                            <form onsubmit="handleCutMp3(event)">
+                                <div class="form-group">
+                                    <label for="cutMp3File">Fichier MP3 :</label>
+                                    <input type="file" id="cutMp3File" class="form-control" accept=".mp3" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cutStart">Début (format HH:MM:SS ou MM:SS) :</label>
+                                    <input type="text" id="cutStart" class="form-control" placeholder="Ex : 0:45 ou 1:20:30" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cutEnd">Fin (format HH:MM:SS ou MM:SS) :</label>
+                                    <input type="text" id="cutEnd" class="form-control" placeholder="Ex : 2:30 ou 1:35:45" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Couper</button>
+                            </form>
+                        </div>
+                        
                     </div><!--/.col-md-4-->
+                    
+
+                    <!---------------------- AUTRES -------------------->
 
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                        <div class="media service-box clickable-box" onclick="toggleYoutubeOptions()" style="cursor: pointer;">
+                        <div class="media service-box clickable-box" onclick="" style="cursor: pointer;">
                             <div class="pull-left">
                                 <i class="fa fa-bullseye"></i>
                             </div>
@@ -433,5 +512,6 @@
     <script src="{{ url_for('static', filename='js/js/jquery.inview.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/custom-scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
