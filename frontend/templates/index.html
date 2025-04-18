@@ -42,8 +42,9 @@
                         <li class="scroll active"><a href="#home">Home</a></li> 
                         <li class="scroll"><a href="#services">Services</a></li>
                         <li class="scroll"><a href="#about">About</a></li> 
-                        <li class="scroll"><a href="#pricing">Pricing</a></li>
-                        <li class="scroll"><a href="#our-team">Team</a></li>
+                        <li class="scroll"><a href="#support-us">Support us</a></li>
+                        <li class="scroll"><a href="#stats">Stats</a></li>
+                        <li class="scroll"><a href="#testimonial">Témoignages</a></li>
                         <li class="scroll"><a href="#contact-us">Contact</a></li>                        
                     </ul>
                 </div>
@@ -165,257 +166,94 @@
 
             <div class="row">
                 <div class="col-sm-6 wow fadeInLeft">
-                  <img class="img-responsive" src="{{ url_for('static', filename='images/about.png') }}" alt="">
+                    <h3 class="column-title">Nous avons commencé par un besoin</h3>
+                    <p>Faire des conversion pour des créas tout en évitant des versions payantes</p>
                 </div>
 
                 <div class="col-sm-6 wow fadeInRight">
-                    <h3 class="column-title">Our Company</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
-
-                    <p>Nulla eu neque commodo, dapibus dolor eget, dictum arcu. In nec purus eu tellus consequat ultricies. Donec feugiat tempor turpis, rutrum sagittis mi venenatis at. Sed molestie lorem a blandit congue. Ut pellentesque odio quis leo volutpat, vitae vulputate felis condimentum. </p>
-
-					<p>Praesent vulputate fermentum lorem, id rhoncus sem vehicula eu. Quisque ullamcorper, orci adipiscing auctor viverra, velit arcu malesuada metus, in volutpat tellus sem at justo.</p>
-
-
-                    <a class="btn btn-primary" href="#">Learn More</a>
-
+                    <h3 class="column-title">Nous ne sommes pas une entreprise</h3>
+                    <p>Mais une passion et un simple apprentissage nous a conduit là</p>
                 </div>
+                
             </div>
+
+            <a class="btn btn-primary" href="#">Learn More</a>
+            
         </div>
     </section><!--/#about-->
 
    
-  <section id="portfolio" style="display:none;">
+    <section id="support-us">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title wow fadeInDown">Servers</h2>
-                <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
-            </div>
-
-            <div class="text-center">
-                <ul class="portfolio-filter">
-                    <li><a class="active" href="#" data-filter="*">All Works</a></li>
-                    <li><a href="#" data-filter=".designing">Designing</a></li>
-                    <li><a href="#" data-filter=".mobile">Mobile App</a></li>
-                    <li><a href="#" data-filter=".development">Development</a></li>
-                </ul><!--/#portfolio-filter-->
-            </div>
-
-            <div class="portfolio-items">
-                <div class="portfolio-item designing">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ url_for('static', filename='images/portfolio/01.jpg') }}" alt="">
-                        <div class="portfolio-info">
-                            <h3>Project Name</h3>
-                            Some description..
-                            <a class="preview" href="{{ url_for('static', filename='images/portfolio/01.jpg') }}" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item mobile development">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ url_for('static', filename='images/portfolio/02.jpg') }}" alt="">
-                        <div class="portfolio-info">
-                            <h3>Project Name</h3>
-                             Some description..
-                            <a class="preview" href="{{ url_for('static', filename='images/portfolio/02.jpg') }}" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item designing">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ url_for('static', filename='images/portfolio/03.jpg') }}" alt="">
-                        <div class="portfolio-info">
-                            <h3>Project Name</h3>
-                             Some description..
-                            <a class="preview" href="{{ url_for('static', filename='images/portfolio/03.jpg') }}" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item mobile">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ url_for('static', filename='images/portfolio/04.jpg') }}" alt="">
-                        <div class="portfolio-info">
-                            <h3>Project Name</h3>
-                            Some description..
-                            <a class="preview" href="{{ url_for('static', filename='images/portfolio/04.jpg') }}" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item designing development">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ url_for('static', filename='images/portfolio/05.jpg') }}" alt="">
-                        <div class="portfolio-info">
-                            <h3>Project Name</h3>
-                             Some description..
-                            <a class="preview" href="{{ url_for('static', filename='images/portfolio/05.jpg') }}" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item mobile">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ url_for('static', filename='images/portfolio/06.jpg') }}" alt="">
-                        <div class="portfolio-info">
-                            <h3>Project Name</h3>
-                             Some description..
-                            <a class="preview" href="{{ url_for('static', filename='images/portfolio/06.jpg') }}" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item designing development">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ url_for('static', filename='images/portfolio/07.jpg') }}" alt="">
-                        <div class="portfolio-info">
-                            <h3>Project Name</h3>
-                             Some description..
-                            <a class="preview" href="{{ url_for('static', filename='images/portfolio/07.jpg') }}" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-
-                <div class="portfolio-item mobile">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="{{ url_for('static', filename='images/portfolio/08.jpg') }}" alt="">
-                        <div class="portfolio-info">
-                            <h3>Project Name</h3>
-                             Some description..
-                            <a class="preview" href="{{ url_for('static', filename='images/portfolio/08.jpg') }}" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div><!--/.portfolio-item-->
-            </div>
-        </div><!--/.container-->
-    </section><!--/#portfolio-->
-
-    <section id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title wow fadeInDown">Pricing</h2>
+                <h2 class="section-title wow fadeInDown">Nous soutenir</h2>
                 <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
             </div>
 
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="0ms">
-                        <ul class="pricing">
+                        <ul class="support-us">
                             <li class="plan-header">
-                                <div class="price-duration">
-                                    <span class="price">
-                                        $45
-                                    </span>
-                                    <span class="duration">
-                                        per month
-                                    </span>
-                                </div>
-
                                 <div class="plan-name">
-                                    Basic
+                                    Wero
                                 </div>
                             </li>
-                            <li><strong>1</strong> DOMAIN</li>
-                            <li><strong>100GB</strong> DISK SPACE</li>
-                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
-                            <li>SHARED SSL CERTIFICATE</li>
-                            <li><strong>10</strong> EMAIL ADDRESS</li>
-                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li>Numéro : <strong>+33(0) 0 00 00 00 00</strong></li>
                             <li class="plan-purchase"><a class="btn btn-primary" href="#">Get It Now!</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="200ms">
-                        <ul class="pricing featured">
+                        <ul class="support-us featured">
                             <li class="plan-header">
-                                <div class="price-duration">
-                                    <span class="price">
-                                        $85
-                                    </span>
-                                    <span class="duration">
-                                        per month
-                                    </span>
-                                </div>
-
                                 <div class="plan-name">
-                                    Business
+                                    banque
                                 </div>
                             </li>
-                            <li><strong>5</strong> DOMAIN</li>
-                            <li><strong>500GB</strong> DISK SPACE</li>
-                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
-                            <li>SHARED SSL CERTIFICATE</li>
-                            <li><strong>30</strong> EMAIL ADDRESS</li>
-                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li>IBAN : <strong>0000-0000</strong></li>
+                            <li>Intitulé : <strong>name</strong></li>
                             <li class="plan-purchase"><a class="btn btn-primary" href="#">Get It Now!</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="400ms">
-                        <ul class="pricing">
+                        <ul class="support-us">
                             <li class="plan-header">
-                                <div class="price-duration">
-                                    <span class="price">
-                                        $125
-                                    </span>
-                                    <span class="duration">
-                                        per month
-                                    </span>
-                                </div>
-
                                 <div class="plan-name">
-                                    Professional
+                                    Western Union
                                 </div>
                             </li>
-                            <li><strong>10</strong> DOMAIN</li>
-                            <li><strong>2GB</strong> DISK SPACE</li>
-                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
-                            <li>SHARED SSL CERTIFICATE</li>
-                            <li><strong>50</strong> EMAIL ADDRESS</li>
-                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li>Nom : <strong>name</strong></li>
+                            <li>Prénom : <strong>name</strong></li>
+                            <li>Numéro : <strong>00</strong></li>
+                            <li>email : <strong>email@emal.com</strong></li>
                             <li class="plan-purchase"><a class="btn btn-primary" href="#">Get It Now!</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="600ms">
-                        <ul class="pricing">
+                        <ul class="support-us">
                             <li class="plan-header">
-                                <div class="price-duration">
-                                    <span class="price">
-                                        $185
-                                    </span>
-                                    <span class="duration">
-                                        per month
-                                    </span>
-                                </div>
-
                                 <div class="plan-name">
-                                    Extended
+                                    PayPal
                                 </div>
                             </li>
-                            <li><strong>15</strong> DOMAIN</li>
-                            <li><strong>10GB</strong> DISK SPACE</li>
-                            <li><strong>UNLIMITED</strong> BANDWIDTH</li>
-                            <li>SHARED SSL CERTIFICATE</li>
-                            <li><strong>100</strong> EMAIL ADDRESS</li>
-                            <li><strong>24/7</strong> SUPPORT</li>
+                            <li>don't know : <strong>don't know</strong></li>
                             <li class="plan-purchase"><a class="btn btn-primary" href="#">Get It Now!</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!--/#pricing-->
+    </section><!--/#support-us-->
    
    
 
-    <section id="business-stats">
+    <section id="stats">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title wow fadeInDown">Business Stats</h2>
@@ -425,113 +263,31 @@
             <div class="row text-center">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
-                        <div class="business-stats" data-digit="6850" data-duration="1000"></div>
+                        <div class="stats" data-digit="6850" data-duration="1000"></div>
                         <strong>Clients</strong>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
-                        <div class="business-stats" data-digit="1465" data-duration="1000"></div>
+                        <div class="stats" data-digit="1465" data-duration="1000"></div>
                         <strong>Completed</strong>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
-                        <div class="business-stats" data-digit="4325" data-duration="1000"></div>
+                        <div class="stats" data-digit="4325" data-duration="1000"></div>
                         <strong>In Progress</strong>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
-                        <div class="business-stats" data-digit="2568" data-duration="1000"></div>
+                        <div class="stats" data-digit="2568" data-duration="1000"></div>
                         <strong>Revenue</strong>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!--/#business-stats-->
-
-    <section id="our-team">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title wow fadeInDown">Amazing Team</h2>
-                <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
-            </div>
-			
-			 	
-            <div class="row text-center">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="{{ url_for('static', filename='images/team/01.jpg') }}" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>John Deo</h3>
-                            <span>Founder</span> 
-                        </div> 
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="{{ url_for('static', filename='images/team/02.jpg') }}" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Mike Timobbs</h3>
-                            <span>President</span> 
-                        </div> 
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="{{ url_for('static', filename='images/team/03.jpg') }}" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Remo Silvaus</h3>
-                            <span>Architect</span> 
-                        </div> 
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
-                        <div class="team-img">
-                            <img class="img-responsive" src="{{ url_for('static', filename='images/team/04.jpg') }}" alt="">
-                        </div>
-                        <div class="team-info">
-                            <h3>Niscal Deon</h3>
-                            <span>Manager</span> 
-                        </div> 
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section><!--/#our-team-->
+    </section><!--/#stats-->
 
     <section class="testimonial-area" id="testimonial">
 			<div class="container">
@@ -549,7 +305,7 @@
 							</div>
 							<div class="row">
 								<div class="col-xs-3">
-									<img src="{{ url_for('static', filename='images/pic1.jpg') }}" alt="client">
+									<i class="fa fa-compass"></i>
 								</div>
 								<div class="col-xs-9 half-gutter">
 									<h5>John Bond</h5>
@@ -567,7 +323,7 @@
 							</div>
 							<div class="row">
 								<div class="col-xs-3">
-									<img src="{{ url_for('static', filename='images/pic2.jpg') }}" alt="client">
+									<i class="fa fa-compass"></i>
 								</div>
 								<div class="col-xs-9 half-gutter">
 									<h5>John Bond</h5>
@@ -585,7 +341,7 @@
 							</div>
 							<div class="row">
 								<div class="col-xs-3">
-									<img src="{{ url_for('static', filename='images/pic1.jpg') }}" alt="client">
+                                    <i class="fa fa-compass"></i>
 								</div>
 								<div class="col-xs-9 half-gutter">
 									<h5>John Bond</h5>
@@ -652,7 +408,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2015 Company Name. Template by <a target="_blank" href="http://webthemez.com/" title="Free Bootstrap Themes and HTML Templates">WebThemez.com</a>
+                    &copy; 2025 AVmanager. Template by <a target="_blank" href="http://webthemez.com/" title="Free Bootstrap Themes and HTML Templates">WebThemez.com</a>
                 </div>
                 <div class="col-sm-6">
                     <ul class="social-icons">

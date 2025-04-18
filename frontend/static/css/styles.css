@@ -715,23 +715,23 @@ border-right: 1px solid #171717;
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #eee;
 }
-#business-stats {
+#stats {
   padding: 100px 0 70px;
   background: #222222;
   background-size: cover;
   color: #fff;
 }
-#business-stats h1,
-#business-stats h2,
-#business-stats h3,
-#business-stats h4 {
+#stats h1,
+#stats h2,
+#stats h3,
+#stats h4 {
   color: #fff;
 }
-#business-stats strong {
+#stats strong {
   display: block;
   margin-bottom: 30px;
 }
-.business-stats {
+.stats {
   display: inline-block;
   width: 140px;
   height: 140px;
@@ -741,10 +741,10 @@ border-right: 1px solid #171717;
   border-radius: 100px;
   margin-bottom: 20px;
 }
-#pricing {
+#support-us {
   padding: 100px 0 70px;
 }
-#pricing ul.pricing {
+#support-us ul.support-us {
   list-style: none;
   padding: 0;
   margin: 70px 0 30px;
@@ -753,18 +753,18 @@ border-right: 1px solid #171717;
   text-align: center;
   background: #E7E7E7;
 }
-#pricing ul.pricing li {
+#support-us ul.support-us li {
   display: block;
   padding: 10px;
 }
-#pricing ul.pricing li.plan-header {
+#support-us ul.support-us li.plan-header {
   background: #222222; 
   margin: -15px -15px 10px;
   padding: 15px 15px 30px;
   border: 0;
   color: #fff !important;
 }
-#pricing ul.pricing li.plan-header .price-duration {
+#support-us ul.support-us li.plan-header .price-duration {
   position: relative;
   margin-top: 15px;
   top: -10px;
@@ -773,19 +773,19 @@ border-right: 1px solid #171717;
   height: 116px; 
   color: #FFF;  
 }
-#pricing ul.pricing li.plan-header .price-duration > span {
+#support-us ul.support-us li.plan-header .price-duration > span {
   display: block;
   line-height: 1;
 }
-#pricing ul.pricing li.plan-header .price-duration > span.price {
+#support-us ul.support-us li.plan-header .price-duration > span.price {
   font-size: 24px;
   font-weight: 700;
   margin-top: 35px;
 }
-#pricing ul.pricing li.plan-header .price-duration > span.duration {
+#support-us ul.support-us li.plan-header .price-duration > span.duration {
   margin-top: 5px;
 }
-#pricing ul.pricing li.plan-header .plan-name {
+#support-us ul.support-us li.plan-header .plan-name {
   margin-top: 10px;
   font-size: 24px;
   color: #FFFFFF;
@@ -793,18 +793,18 @@ border-right: 1px solid #171717;
   line-height: 1;
   text-transform: uppercase;
 }
-#pricing ul.pricing.featured {
+#support-us ul.support-us.featured {
   background: #E7E7E7; 
   border: 0;
   color: #222;
 }
-#pricing ul.pricing.featured  li.plan-header .price-duration{
+#support-us ul.support-us.featured  li.plan-header .price-duration{
 color:#fff;
 }
-#pricing ul.pricing.featured li.plan-header {
+#support-us ul.support-us.featured li.plan-header {
   background: #48B1DF;
 }
-#pricing ul.pricing.featured li.plan-header .plan-name {
+#support-us ul.support-us.featured li.plan-header .plan-name {
   color: #fff;
 }
 #contact-us {
@@ -827,7 +827,7 @@ font-size: 15px;
 padding: 6px 12px;
 border-radius: 0;
 }
- .business-stats:before {
+ .stats:before {
 content: '';
 margin: 17px;
 display: block;
