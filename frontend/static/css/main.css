@@ -1,4 +1,18 @@
-body {
+/* main.css */
+
+.clickable-box {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.clickable-box:hover {
+    background-color: #f0f0f0; /* gris clair */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* petite ombre douce */
+}
+
+
+/* body {
     font-family: sans-serif;
     text-align: center;
     margin-top: 50px;
@@ -7,4 +21,4 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     margin: 10px;
-}
+} */

@@ -17,9 +17,17 @@ def convert_file():
     print("Conversion déclenchée !")
     return redirect(url_for('index'))
 
+# Exemple d'action déclenchée par un bouton
+@app.route('/mp4_to_mp3', methods=['POST'])
+def mp4_to_mp3():
+    # Ici tu appelleras tes fonctions de conversion
+    # Exemple fictif :
+    print("Conversion déclenchée !")
+    return redirect(url_for('index'))
+
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = 'backend/uploads'
+UPLOAD_FOLDER = f"{os.path.dirname(__file__)}/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
